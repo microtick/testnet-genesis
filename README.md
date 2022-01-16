@@ -1,0 +1,2 @@
+# testnet-genesis
+Stargate testnet
