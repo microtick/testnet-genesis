@@ -10,3 +10,11 @@ Binary: https://microtick.com/releases/mainnet
 ```
 
 To build from source, ensure you have the unzip utility installed on your system.
+
+## Syncing a node
+
+### Full sync
+```
+$ ./fullsync.sh
+```
+
