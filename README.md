@@ -2,7 +2,7 @@
 
 ## Requirements
 
-You must have the mtm 2.0.0 binary in your path, available from here:
+You must have the mtm 2.0.5 binary in your path, available from here:
 
 ```
 Source: https://github.com/microtick/mtzone (main branch, tag mtm-v2.0.0)
