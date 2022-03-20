@@ -13,8 +13,24 @@ To build from source, ensure you have the unzip utility installed on your system
 
 ## Syncing a node
 
-### Full sync
+### Full sync script (method 1)
 ```
 $ ./fullsync.sh
 ```
 
+### Manual config/syncing (method 2) 
+Don't run in the same profile than your MainNet validator
+```
+wget https://microtick.com/releases/mainnet/microtick-v2.0.5-linux-x86_64.tar.gz
+tar zxvf microtick-v2.0.5-linux-x86_64.tar.gz 
+chmod +x mtm
+sudo mv mtm /usr/local/bin
+mtm init yourpeer --chain-id microtick-test-1
+curl -s https://raw.githubusercontent.com/microtick/testnet-genesis/main/genesis.json > ~/.microtick/config/genesis.json
+sed -E -i 's/seeds = \".*\"/seeds = \"ed659a70fa610cd8034733c5f9174bb95f54eedb@45.79.187.79:26656,8ada4746da93d37726c5e4c3880d3495ec4aeeb4@164.68.119.233:26656\"/' $HOME/.microtick/config/config.toml
+sed -E -i 's/minimum-gas-prices = \".*\"/minimum-gas-prices = \"0.001stake\"/' $HOME/.microtick/config/app.toml
+```
+And now start the daemon:
+```
+mtm start
+```
