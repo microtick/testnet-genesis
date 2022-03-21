@@ -34,3 +34,20 @@ And now start the daemon:
 ```
 mtm start
 ```
+### Bercome validator
+After get some test-coins (ask in Discord): 
+```
+mtm tx staking create-validator \
+    --amount 99000000stake \
+    --commission-max-change-rate 0.10 \
+    --commission-max-rate 0.2 \
+    --commission-rate 0.1 \
+    --from WALLET_NAME \
+    --min-self-delegation 1 \
+    --moniker YOUR_MONIKER \
+    --pubkey $(mtm tendermint show-validator) \
+    --chain-id microtick-testnet-1 \
+    --gas auto \
+    --gas-adjustment 1.5 \
+    --gas-prices 0.001stake ```
+  
