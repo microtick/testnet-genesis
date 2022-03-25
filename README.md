@@ -27,8 +27,8 @@ chmod +x mtm
 sudo mv mtm /usr/local/bin
 mtm init yourpeer --chain-id microtick-test-1
 curl -s https://raw.githubusercontent.com/microtick/testnet-genesis/main/genesis.json > ~/.microtick/config/genesis.json
-sed -E -i 's/seeds = \".*\"/seeds = \"ed659a70fa610cd8034733c5f9174bb95f54eedb@45.79.187.79:26656,8ada4746da93d37726c5e4c3880d3495ec4aeeb4@164.68.119.233:26656\"/' $HOME/.microtick/config/config.toml
-sed -E -i 's/minimum-gas-prices = \".*\"/minimum-gas-prices = \"0.001stake\"/' $HOME/.microtick/config/app.toml
+sed -E -i 's/seeds = \".*\"/seeds = \"8ada4746da93d37726c5e4c3880d3495ec4aeeb4@164.68.119.233:26656\"/' $HOME/.microtick-testnet/config/config.toml
+sed -E -i 's/minimum-gas-prices = \".*\"/minimum-gas-prices = \"0.001stake\"/' $HOME/.microtick-testnet/config/app.toml
 ```
 And now start the daemon:
 ```
