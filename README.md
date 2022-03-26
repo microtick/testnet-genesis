@@ -34,7 +34,7 @@ And now start the daemon:
 ```
 mtm start
 ```
-### Bercome validator
+### Become validator
 After get some test-coins (ask in Discord): 
 ```
 mtm tx staking create-validator \
