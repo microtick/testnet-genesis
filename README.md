@@ -49,5 +49,6 @@ mtm tx staking create-validator \
     --chain-id microtick-testnet-1 \
     --gas auto \
     --gas-adjustment 1.5 \
-    --gas-prices 0.001stake ```
+    --gas-prices 0.001stake
+```
   
