@@ -47,8 +47,6 @@ mtm tx staking create-validator \
     --moniker YOUR_MONIKER \
     --pubkey $(mtm tendermint show-validator) \
     --chain-id microtick-testnet-1 \
-    --gas auto \
-    --gas-adjustment 1.5 \
-    --gas-prices 0.001stake
+    --fees 3000stake
 ```
   
